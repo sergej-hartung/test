@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+    @@include('./include_html/head.html')
+  <!-- End Head -->
+  
+  <body>
+    <div class="container-fluid" style="height: 100%;">
+      <!-- Block Header -->
+        @@include('./include_html/header.html')
+      <!-- Block Header Ende -->
+
+      <!-- Menu Mobil -->
+        @@include('./include_html/mobile_menu.html')
+      <!-- Menu Mobil Ende -->
+
+      <!-- cntent wrap-->
+      <div class="row content_wrap overflow-hidden">
+        <!-- ipad & desc Main menu -->
+          @@include('./include_html/main_menu.html')
+        <!-- END ipad & desc Main menu -->
+
+        <!-- content -->
+        <div class="col ene_content content_rechner">
+          <div class="row d-none d-xl-flex">
+            <div class="col bread_krums">Tarifrechner Mobilfunk</div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <div class="row tarif-card-wrapp mobile">
+                    <div class="col">
+                        <div class="tarif-card prio">
+                          <div class="bg-tarif-card">
+                            <!-- First Block -->
+                            <div class="first-block-wrapp">
+                              <div class="row">
+                                <div class="col-6 col-md-4 col-xl-4">
+                                    <div class="row">
+                                        <div class="col m_logo">
+                                            <img src="img/klarmobil_logo.svg">
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col">
+                                            <span class="test2" ><img src="img/kalender.svg"></span>
+                                            <span>24 Monate</span>
+                                        </div>
+                                        <div class="col">
+                                            <span><img src="img/wifi.svg"></span>
+                                            <span><img src="img/vodafone_logo_netzbetreiber.svg"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col">
+                                        <span>Smart XL Basic Phone 24*12 Rabatt inkl. DC <span>ID 285</span></span>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12 col-xl-5">
+                                  <div class="row">
+                                    <div class="col">Allnet & SMS Flat</div>
+                                    <div class="col">10 GB Daten</div>
+                                    <div class="col">50 Mbit/s</div>
+                                  </div>
+                                  <div class="row">
+                                    <ul>
+                                      <li>kein Anschlusspreis</li>
+                                      <li>Liefertermin unbekannt</li>
+                                    </ul>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <img src="img/iphone.svg">
+                                    </div>
+                                    <div class="col">
+                                      <span class="manufacturer">Apple</span>
+                                      <span class="hardware-info">iPad Air 4. Gen. 10,9" Wi-Fi 2020 64 GB  spacegrau</span>
+                                    </div>
+                                  </div>
+                                </div>
+        
+                                <div class="col-6 col-md-8 col-xl-3">
+
+
+                                </div>                
+                              </div>
+                            </div>
+                            <!-- Second Block -->
+                            <div class="second-block-wrapp">
+                              <div class="second-block">
+                                <div class="row ">
+                                  <div class="col align-self-end second_bloc_1">
+                                    <div class="tab_accordion_btn">
+                                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="home-tab" data-toggle="collapse" href="#test1" role="button" aria-controls="test1" aria-expanded="false">Tarifdetails</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="profile-tab" data-toggle="collapse" href="#test2" role="button" aria-controls="test2" aria-expanded="false">Merkmale</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="contact-tab" data-toggle="collapse" href="#test3" role="button" aria-controls="test3" aria-expanded="false">Provision</a>
+                                        </li>
+                                      </ul>
+                                    </div>                        
+                                  </div>
+                                  <!-- <div class="col">
+                                    <button class="btn " type="button" data-toggle="collapse" data-target="#test1" aria-expanded="false" aria-controls="test1">Toggle second element</button>
+                                    <button class="btn " type="button" data-toggle="collapse" data-target="#test2" aria-expanded="false" aria-controls="test2">Toggle second element</button>
+                                    <button class="btn " type="button" data-toggle="collapse" data-target="#test3" aria-expanded="false" aria-controls="test3">Toggle both elements</button>
+                                  </div>                       -->
+                                  <div class="col second_bloc_2">
+                                    <div class="commission_wrap">
+                                      <div class="acq_commission_wrap">
+                                        <div>
+                                          <div class="acq_commission_tittle">Abschlussprovision</div>
+                                          <div class="acq_commission">
+                                            <i class="fas fa-coins"></i>118,00 €
+                                          </div>
+                                        </div>
+                                        
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                  <div class="col second_bloc_3">
+                                    <div class="tariff_action">
+                                      <button class="btn tariff_action_offer"><i class="fas fa-print"></i><span>Zum Angebot</span></button>
+                                      <!-- <button class="btn tariff_action_switch">Wechseln <i class="fas fa-exchange-alt"></i></button> -->
+                                      <a href="#" class="btn tariff_action_switch">Wechseln <i class="fas fa-exchange-alt"></i></a>
+                                    </div>                         
+                                  </div>
+                                </div>                      
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Accordion Block -->
+                          <div>                  
+                            <div class="row" id="accordion">
+                              <div class="col-12">
+                                <div class="collapse" id="test1" data-parent="#accordion">
+                                  <div class="accordion-tarifdetails-wrap">
+                                    <!-- Tarif Details -->
+                                    <table class="table tarif-details">
+                                      <tbody>
+                                        <tr>
+                                          <td>Vertragslaufzeit</td>
+                                          <td>12 Monate</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Kündigungsfrist</td>
+                                          <td>1 Monat</td>
+                                        </tr>  
+                                        <tr>
+                                          <td>Preisgarantie</td>
+                                          <td>12 Monate Energiepreisgarantie</td>
+                                        </tr>   
+                                        <tr>
+                                          <td>gewünschtes Lieferdatum Pflicht</td>
+                                          <td>Nein, schnellstmöglich</td>
+                                        </tr>  
+                                      </tbody>                        
+                                    </table>
+                                    <!-- Tarif Hinweis -->
+                                    <div class="tarif-note">
+                                      <div>Hinweis</div>
+                                      <div>Achtung: Bitte beachten Sie das die Preise reine Brutto-Preis sind</div>
+                                    </div>
+                                    
+                                    <!-- Tarif Attribute -->
+                                    <div class="attr-and-documents">
+                                      <ul class="tarif-attr">
+                                        <li><i class="fas fa-pen " ></i>Dieser Anbieter akzeptiert die digitale Unterschrift</li>
+                                        <li><i class="fas fa-leaf"></i>Bei diesem Tarif handelt es sich um Ökoenergie</li>
+                                        <li><i class="fas fa-gift"></i>Der Kunde erhält einen einmaligen Bonus / Treue-Bonus von <span class="green">100,00 €</span></li>
+                                        <li><i class="far fa-envelope"></i>Bei diesem Tarif ist die Angabe der E-Mail-Adresse Pflicht</li>
+                                        <li><i class="far fa-credit-card"></i>Kunde hat die Möglichkeit der Selbstzahlung</li>
+                                      </ul>
+        
+                                      <div class="documents">
+                                          <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn">
+                                              <span class="desctop"><i class="fas fa-download"></i></span>
+                                              <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Formular Blanko</span></span>
+                                            </button>
+                                            <button type="button" class="btn">
+                                              <span class="desctop"><i class="fas fa-user-check"></i></span>
+                                              <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Vollmacht</span></span>
+                                            </button>
+                                            <button type="button" class="btn">
+                                              <span class="desctop"><i class="fas fa-lock "></i></span>
+                                              <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Datenschutzerklärung</span></span>
+                                            </button>
+                                          </div>
+                                          <div class="cloud_bg"><i class="fas fa-cloud-download-alt"></i></div>
+                                      </div>
+                                      
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="collapse" id="test2" data-parent="#accordion">
+                                  <div class="accordion-tarifcharacteristic-wrap">
+                                    <table class="table tarif-characteristic">
+                                      <tbody>
+                                        <tr>
+                                          <td>Neueinzug rückwirkend</td>
+                                          <td>6 Woche(n)</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Neueinzug im Voraus</td>
+                                          <td>6 Woche(n)</td>
+                                        </tr>  
+                                        <tr>
+                                          <td>Wechsel im Voraus</td>
+                                          <td>6 Woche(n)</td>
+                                        </tr>   
+                                        <tr>
+                                          <td>Abschläge jährlich</td>
+                                          <td>11</td>
+                                        </tr>  
+                                        <tr>
+                                          <td>Maximales Alter des Kunden</td>
+                                          <td>99 Jahre</td>
+                                        </tr> 
+                                      </tbody>                        
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="collapse" id="test3" data-parent="#accordion">
+                                  <div class="accordion-tarifprov-wrap">
+                                    <table class="table tarif-prov">
+                                      <tbody>
+                                        <tr>
+                                          <td>Abschlussprovision</td>
+                                          <td>118 €</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Leaderbonus</td>
+                                          <td>59 €</td>
+                                        </tr>  
+                                        <tr>
+                                          <td>On-Top </td>
+                                          <td>3 €</td>
+                                        </tr>   
+                                        <tr>
+                                          <td>Zielvereinbarung</td>
+                                          <td>2 € pro Vertag</td>
+                                        </tr>                                 
+                                      </tbody>                        
+                                    </table>
+                                    <div class="tarif-prov-summ">
+                                      <div>Summe</div>
+                                      <div>182 €</div>
+                                    </div>
+        
+                                    <table class="table tarif-prov">
+                                      <tbody>
+                                        <tr>
+                                          <td>Folgeprovision jährlich</td>
+                                          <td>15 €</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Folgeprovision einmalig</td>
+                                          <td>35 €</td>
+                                        </tr>                                  
+                                      </tbody>                        
+                                    </table>
+        
+                                    <div class="tarif-prov-summ">
+                                      <div>Summe</div>
+                                      <div>50 €</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>                
+                      </div>
+                    </div>
+              </div>
+
+              <!-- Tarif Filter -->
+              <div class="col tarif-filter">
+
+              </div>
+              <!--END Tarif Filter -->
+          </div>
+
+          <div class="row">
+              <div class="col">
+                <div class="row tarif-card-wrapp mobile">
+                    <div class="col">
+                        <div class="tarif-card prio">
+                          <div class="bg-tarif-card">
+                            <!-- First Block -->
+                            <div class="first-block-wrapp">
+                              <div class="row">
+                                <div class="col-6 col-md-4 col-xl-4">
+                                    <div class="row">
+                                        <div class="col m_logo">
+                                            <img src="img/o2-logo.svg">
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col">
+                                            <img src="img/kalender.svg">
+                                            <span>24 Monate</span>
+                                        </div>
+                                        <div class="col">
+                                            <img src="img/wifi.svg">
+                                            <img src="img/vodafone_logo_netzbetreiber.svg">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col">
+                                        <span>Smart XL Basic Phone 24*12 Rabatt inkl. DC <span>ID 285</span></span>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12 col-xl-5">
+                                  <div class="row">
+                                    <div class="col">Allnet & SMS Flat</div>
+                                    <div class="col">10 GB Daten</div>
+                                    <div class="col">50 Mbit/s</div>
+                                  </div>
+                                  <div class="row">
+                                    <ul>
+                                      <li>kein Anschlusspreis</li>
+                                      <li>Liefertermin unbekannt</li>
+                                    </ul>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      <img src="img/iphone.svg">
+                                    </div>
+                                    <div class="col">
+                                      <span class="manufacturer">Apple</span>
+                                      <span class="hardware-info">iPad Air 4. Gen. 10,9" Wi-Fi 2020 64 GB  spacegrau</span>
+                                    </div>
+                                  </div>
+                                </div>
+        
+                                <div class="col-6 col-md-8 col-xl-3">
+
+
+                                </div>                
+                              </div>
+                            </div>
+                            <!-- Second Block -->
+                            <div class="second-block-wrapp">
+                              <div class="second-block">
+                                <div class="row ">
+                                  <div class="col align-self-end second_bloc_1">
+                                    <div class="tab_accordion_btn">
+                                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="home-tab" data-toggle="collapse" href="#test1" role="button" aria-controls="test1" aria-expanded="false">Tarifdetails</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="profile-tab" data-toggle="collapse" href="#test2" role="button" aria-controls="test2" aria-expanded="false">Merkmale</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="contact-tab" data-toggle="collapse" href="#test3" role="button" aria-controls="test3" aria-expanded="false">Provision</a>
+                                        </li>
+                                      </ul>
+                                    </div>                        
+                                  </div>
+                                  <!-- <div class="col">
+                                    <button class="btn " type="button" data-toggle="collapse" data-target="#test1" aria-expanded="false" aria-controls="test1">Toggle second element</button>
+                                    <button class="btn " type="button" data-toggle="collapse" data-target="#test2" aria-expanded="false" aria-controls="test2">Toggle second element</button>
+                                    <button class="btn " type="button" data-toggle="collapse" data-target="#test3" aria-expanded="false" aria-controls="test3">Toggle both elements</button>
+                                  </div>                       -->
+                                  <div class="col second_bloc_2">
+                                    <div class="commission_wrap">
+                                      <div class="acq_commission_wrap">
+                                        <div>
+                                          <div class="acq_commission_tittle">Abschlussprovision</div>
+                                          <div class="acq_commission">
+                                            <i class="fas fa-coins"></i>118,00 €
+                                          </div>
+                                        </div>
+                                        
+                                      </div>
+                                      <div class="follow_up_comm_wrap">
+                                        <div class="follow_up_comm_tittle">Folgeprovision</div>
+                                        <div>
+                                          <span class="follow_up_comm">Ja</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                  <div class="col second_bloc_3">
+                                    <div class="tariff_action">
+                                      <button class="btn tariff_action_offer"><i class="fas fa-print"></i><span>Zum Angebot</span></button>
+                                      <!-- <button class="btn tariff_action_switch">Wechseln <i class="fas fa-exchange-alt"></i></button> -->
+                                      <a href="#" class="btn tariff_action_switch">Wechseln <i class="fas fa-exchange-alt"></i></a>
+                                    </div>                         
+                                  </div>
+                                </div>                      
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Accordion Block -->
+                          <div>                  
+                            <div class="row" id="accordion">
+                              <div class="col-12">
+                                <div class="collapse" id="test1" data-parent="#accordion">
+                                  <div class="accordion-tarifdetails-wrap">
+                                    <!-- Tarif Details -->
+                                    <table class="table tarif-details">
+                                      <tbody>
+                                        <tr>
+                                          <td>Vertragslaufzeit</td>
+                                          <td>12 Monate</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Kündigungsfrist</td>
+                                          <td>1 Monat</td>
+                                        </tr>  
+                                        <tr>
+                                          <td>Preisgarantie</td>
+                                          <td>12 Monate Energiepreisgarantie</td>
+                                        </tr>   
+                                        <tr>
+                                          <td>gewünschtes Lieferdatum Pflicht</td>
+                                          <td>Nein, schnellstmöglich</td>
+                                        </tr>  
+                                      </tbody>                        
+                                    </table>
+                                    <!-- Tarif Hinweis -->
+                                    <div class="tarif-note">
+                                      <div>Hinweis</div>
+                                      <div>Achtung: Bitte beachten Sie das die Preise reine Brutto-Preis sind</div>
+                                    </div>
+                                    
+                                    <!-- Tarif Attribute -->
+                                    <div class="attr-and-documents">
+                                      <ul class="tarif-attr">
+                                        <li><i class="fas fa-pen " ></i>Dieser Anbieter akzeptiert die digitale Unterschrift</li>
+                                        <li><i class="fas fa-leaf"></i>Bei diesem Tarif handelt es sich um Ökoenergie</li>
+                                        <li><i class="fas fa-gift"></i>Der Kunde erhält einen einmaligen Bonus / Treue-Bonus von <span class="green">100,00 €</span></li>
+                                        <li><i class="far fa-envelope"></i>Bei diesem Tarif ist die Angabe der E-Mail-Adresse Pflicht</li>
+                                        <li><i class="far fa-credit-card"></i>Kunde hat die Möglichkeit der Selbstzahlung</li>
+                                      </ul>
+        
+                                      <div class="documents">
+                                          <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn">
+                                              <span class="desctop"><i class="fas fa-download"></i></span>
+                                              <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Formular Blanko</span></span>
+                                            </button>
+                                            <button type="button" class="btn">
+                                              <span class="desctop"><i class="fas fa-user-check"></i></span>
+                                              <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Vollmacht</span></span>
+                                            </button>
+                                            <button type="button" class="btn">
+                                              <span class="desctop"><i class="fas fa-lock "></i></span>
+                                              <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Datenschutzerklärung</span></span>
+                                            </button>
+                                          </div>
+                                          <div class="cloud_bg"><i class="fas fa-cloud-download-alt"></i></div>
+                                      </div>
+                                      
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="collapse" id="test2" data-parent="#accordion">
+                                  <div class="accordion-tarifcharacteristic-wrap">
+                                    <table class="table tarif-characteristic">
+                                      <tbody>
+                                        <tr>
+                                          <td>Neueinzug rückwirkend</td>
+                                          <td>6 Woche(n)</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Neueinzug im Voraus</td>
+                                          <td>6 Woche(n)</td>
+                                        </tr>  
+                                        <tr>
+                                          <td>Wechsel im Voraus</td>
+                                          <td>6 Woche(n)</td>
+                                        </tr>   
+                                        <tr>
+                                          <td>Abschläge jährlich</td>
+                                          <td>11</td>
+                                        </tr>  
+                                        <tr>
+                                          <td>Maximales Alter des Kunden</td>
+                                          <td>99 Jahre</td>
+                                        </tr> 
+                                      </tbody>                        
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="collapse" id="test3" data-parent="#accordion">
+                                  <div class="accordion-tarifprov-wrap">
+                                    <table class="table tarif-prov">
+                                      <tbody>
+                                        <tr>
+                                          <td>Abschlussprovision</td>
+                                          <td>118 €</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Leaderbonus</td>
+                                          <td>59 €</td>
+                                        </tr>  
+                                        <tr>
+                                          <td>On-Top </td>
+                                          <td>3 €</td>
+                                        </tr>   
+                                        <tr>
+                                          <td>Zielvereinbarung</td>
+                                          <td>2 € pro Vertag</td>
+                                        </tr>                                 
+                                      </tbody>                        
+                                    </table>
+                                    <div class="tarif-prov-summ">
+                                      <div>Summe</div>
+                                      <div>182 €</div>
+                                    </div>
+        
+                                    <table class="table tarif-prov">
+                                      <tbody>
+                                        <tr>
+                                          <td>Folgeprovision jährlich</td>
+                                          <td>15 €</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Folgeprovision einmalig</td>
+                                          <td>35 €</td>
+                                        </tr>                                  
+                                      </tbody>                        
+                                    </table>
+        
+                                    <div class="tarif-prov-summ">
+                                      <div>Summe</div>
+                                      <div>50 €</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>                
+                      </div>
+                    </div>
+              </div>
+
+              <!-- Tarif Filter -->
+              <div class="col tarif-filter">
+
+              </div>
+              <!--END Tarif Filter -->
+          </div>
+          <!-- Tarifs -->
+
+        </div>
+        <!-- END content -->
+      </div>
+      <!-- END cntent wrap -->
+    </div>
+
+    <!-- second mobile menu -->
+    @@include('./include_html/second_mobile_menu.html')
+    <!--END second mobile menu -->
+
+    @@include('./include_html/scripts_footer.html')
+  </body>
+</html>

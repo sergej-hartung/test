@@ -1,0 +1,34 @@
+.tarif-card-wrapp{
+    &.mobile{
+        .first-block-wrapp{
+            padding: 15px;
+        }
+        .m_logo{
+            img{
+                max-width: 191px;
+                //width: 100%;
+                max-height: 52px;
+                //height: 100%;
+            }
+        }
+
+    }
+}
+
+.acq_commission_wrap_second_mobile{
+    display: none;
+    @media screen and (min-width: 768px) and (max-width: 1385px){
+        display: flex;
+        flex: 0 0 100%;
+        justify-content: flex-end;
+
+        font-size: 12px;
+        font-family: Roboto;
+        font-weight: 700;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+    .follow_up_comm_tittle_second_mobile{
+        padding-left: 20px;
+    }
+}

@@ -1,0 +1,1423 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+    @@include('./include_html/head.html')
+  <!-- End Head -->
+  
+  <body>
+    <div class="container-fluid" style="height: 100%;">
+      <!-- Block Header -->
+        @@include('./include_html/header.html')
+      <!-- Block Header Ende -->
+
+      <!-- Menu Mobil -->
+        @@include('./include_html/mobile_menu.html')
+      <!-- Menu Mobil Ende -->
+
+      <!-- cntent wrap-->
+      <div class="row content_wrap overflow-hidden">
+        <!-- ipad & desc Main menu -->
+          @@include('./include_html/main_menu.html')
+        <!-- END ipad & desc Main menu -->
+
+        <!-- content -->
+        <div class="col ene_content content_rechner">
+          <div class="row d-none d-xl-flex">
+            <div class="col bread_krums">Tarifrechner Energie</div>
+          </div>
+
+          <div class="row rechner_form_wrapp">
+            
+            <div class="col-12">
+                <div class="calc_data_wrap">
+                    <div class="row">
+                      <!-- SUB TITLE -->
+                        <div class="col-12 d-xl-none">
+                          <div class="sub_title">Berechnungsdaten</div>                            
+                        </div>
+                      <!--END SUB TITLE -->
+
+                      <!-- BTN BLOCK -->
+                        <div class="col-sm-12 col-md-12 col-xl-4">
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="calc_data_attributs p-20-left">
+                                  <form>
+                                      <div class="radio_btn_group">
+                                        <span class="radio_btn_group_border">
+                                          <input type="radio" id="option-one_1" name="selector" checked>
+                                              <label for="option-one_1"><i class="fas fa-lightbulb"></i></label>
+                                          <input type="radio" id="option-two_1" name="selector">
+                                              <label for="option-two_1"><i class="fas fa-fire-alt"></i></label>
+                                          <input type="radio" id="option-three_1" name="selector">
+                                              <label for="option-three_1"><i class="fas fa-sun"></i></label>
+                                        </span>   
+                                      </div>
+                                      <div class="btn_title_wrapp">
+                                        <span class="btn_title">Strom</span>
+                                      </div>
+                                  </form>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="calc_data_attributs p-20-right">
+                                <form>
+                                    <div class="radio_btn_group position_flex_end">
+                                      <span class="radio_btn_group_border">
+                                        <input type="radio" id="option-one_2" name="selector" checked>
+                                            <label for="option-one_2"><i class="fas fa-home"></i></label>
+                                        <input type="radio" id="option-two_2" name="selector">
+                                            <label for="option-two_2"><i class="fas fa-suitcase"></i></label>
+                                        <input type="radio" id="option-three_2" name="selector">
+                                            <label for="option-three_2"><i class="fas fa-user-friends"></i></label>
+                                      </span>
+                                    </div>
+                                    <div class="btn_title_wrapp btn_flex_end">
+                                      <span class="btn_title">Privat</span>
+                                    </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                 
+                      <!--END BTN BLOCK -->
+
+                      <!-- VP-FILTER BLOCK -->
+                        <div class="col-sm-12 col-md-12 col-xl-8 vp-filter-mobile">
+                          <div class="vp-filter-wrapp">
+                              <div class="chekbox_switsh">
+                                  <input type="checkbox" id="toggle"/>
+                                  <div class="c_switsh">
+                                      <label for="toggle"></label>
+                                  </div>
+                                  <span class="chekbox_switsh_label">VP-Ansicht</span>
+                              </div>
+                              <div class="filter_rechner">
+                                  <span class="filter_title">Filter</span>
+                                  <button class="btn filter_rechner_btn" data-toggle="modal" data-target="#tariffCalcFilter">
+                                    <i class="fas fa-cog filter_icon"></i>
+                                  </button>   
+                              </div>
+                          </div>
+                        </div>
+                      <!--END VP-FILTER BLOCK -->                       
+                    </div> 
+
+                    <div class="row energy_calc_form_row">
+                      <div class="col-sm-12 col-md-6 col-xl-4  block_one">
+                        <div class="energy_calc_form">
+                          <form class="form-row ">
+                            <div class="col-12">
+                              <div class="was-validated form-group">
+                                <input type="text" class="form-control" placeholder="Kunden Suche" aria-label="Kunden Suche">
+                                <div class="invalid-feedback">Check this checkbox to continue.</div>
+                              </div>              
+                            </div>
+                            
+                              <div class="col-4">
+                                <div class="form-group was-validated">
+                                  <input type="text" class="form-control" placeholder="PLZ" aria-label="PLZ" >
+                                  <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                </div>
+                              </div>
+                              <div class="col-8">
+                                <div class="form-group">
+                                  <select class="form-control">
+                                    <option value="" selected disabled>Ort</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                </div>
+                              </div>
+                              <div class="col-8">
+                                <div class="form-group">
+                                  <select class="form-control">
+                                    <option value="" selected disabled>Straße</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="form-group was-validated">
+                                  <input type="text" class="form-control" placeholder="Nr." aria-label="Nr.">
+                                  <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                </div>     
+                              </div>
+                              <div class="col-12">
+                                <div class="form-group">
+                                  <select class="form-control">
+                                    <option value="" selected disabled>Kein Netzbetreiber</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                </div>
+                              </div>
+                              
+                              
+                          </form>
+                        </div>                       
+                      </div>
+
+
+                      <div class="col-sm-12 col-md-6 col-xl-4 block_two">
+                        <div class="calc_data_attributs option-people">
+                            <form>
+                                <div class="radio_btn_group p-20-left p-20-right">
+                                  <span class="radio_btn_group_border">
+                                    <input type="radio" id="option-people-one_1" name="selector" checked>
+                                        <label class="option-people-one_1" for="option-people-one_1">
+                                          <i class="fas fa-user"></i>
+                                        </label>
+                                    <input type="radio" id="option-people-two_1" name="selector">
+                                        <label class="option-people-two_1" for="option-people-two_1">
+                                          <i class="fas fa-user"></i>
+                                          <i class="fas fa-user"></i>
+                                        </label>
+                                    <input type="radio" id="option-people-three_1" name="selector">
+                                        <label class="option-people-three_1" for="option-people-three_1">
+                                          <i class="fas fa-user"></i>
+                                          <i class="fas fa-user"></i>
+                                          <i class="fas fa-user"></i>                                      
+                                        </label>
+                                    <input type="radio" id="option-people-four_1" name="selector">
+                                      <label class="option-people-four_1" for="option-people-four_1">
+                                        <i class="fas fa-user"></i>
+                                        <i class="fas fa-user"></i>
+                                        <i class="fas fa-user"></i>
+                                        <i class="fas fa-user"></i>
+                                      </label>
+                                  </span>   
+                                </div>
+                                <div class="energy_calc_form">
+                                  <div class="form-row">
+                                    <div class="col-6">
+                                      <div class="form-group was-validated">
+                                        <input type="text" class="form-control" placeholder="HT (kWh / Jahr)" aria-label="HT (kWh / Jahr)" >
+                                        <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6">
+                                      <div class="form-group was-validated">
+                                        <input type="text" class="form-control" placeholder="NT (kWh / Jahr)" aria-label="NT (kWh / Jahr)" >
+                                        <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <select class="form-control">                                          
+                                          <option value="1">nur Normalstrom</option>
+                                          <option value="2">Wärmepumpe</option>
+                                          <option value="3">Wärmespeichr/Heizung</option>
+                                        </select>
+                                        <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <select class="form-control">
+                                          <option value="1">normale Messung</option>
+                                          <option value="2">getrennte Messung</option>
+                                          <option value="3">gemeinsame Messung</option>
+                                        </select>
+                                        <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>   
+                                <!-- <div class="checkbox_group">
+                                  <label class="checkbox_custom bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                    <span class="label_title">Jahrespreis mit Bonus</span>
+                                  </label>
+                                  <label class="checkbox_custom bounce">
+                                    <input type="checkbox">
+                                    <svg viewBox="0 0 21 21">
+                                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                    </svg>
+                                    <span class="label_title">Tarife nur mit digitaler Unterschrift</span>
+                                  </label>
+                                </div> -->
+                                                            
+                            </form>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12 col-md-12 col-xl-4 block_three">
+                        <button class="btn btn-custom-collapse d-xl-none" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          <span class="tittle">Grundversorger Vergleich</span>
+                          <i class="fas fa-chevron-down"></i>
+                        </button>
+
+                        <div class="collapse collapse_custom" id="collapseExample">
+                          <div class="form-row">
+                            <div class="col-sm-12 col-md-6 col-xl-12">
+                              <div class="form-row">
+                                <div class="col-12">
+                                  <div class="form-group">
+                                    <select class="form-control">
+                                      <option value="" selected disabled>PFALZWERKE ATIENGESELLSCHAFT</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-group">
+                                    <select class="form-control">
+                                      <option value="" selected disabled>Pfalzwerke classic</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-xl-12">
+                              <div class="form-row">
+                                <div class="col-12">
+                                  <div class="form-group was-validated">
+                                    <input type="text" class="form-control" placeholder="Grundpreis Euro / Jahr" aria-label="Grundpreis Euro / Jahr" >
+                                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-group was-validated">
+                                    <input type="text" class="form-control" placeholder="HT (ct / kWH)" aria-label="HT (ct / kWH)" >
+                                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-group was-validated">
+                                    <input type="text" class="form-control" placeholder="NT (ct / kWH)" aria-label="NT (ct / kWH)" >
+                                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                                                      
+                            <div class="col-12">
+                              <div class="btn-group btn-group-b-prov" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-load">Grundversorger Laden</button>                                
+                                <button type="button" class="btn btn-reload"><i class="fas fa-redo-alt"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+
+                      <div class="col-sm-12 col-md-12 col-xl-4 block_four">
+                        <div class="btn-grpup-calc-tariff">
+                          <button class="btn calc_tariff">Tarif berechnen</button>
+                        </div>                   
+                      </div>                   
+                    </div>
+
+                    
+                </div>              
+            </div> 
+          </div>
+
+          <!-- Filter -->
+          <div class="rechner_filter">
+            <div class="form-group row">
+              <label  for="exampleFormControlSelect2">Sortiert nach:</label>
+              <div class="">
+                <select class="form-control" id="exampleFormControlSelect2">
+                  <option>Gesamtpreis</option>
+                  <option>Provision aufsteigend</option>
+                  <option>Provision absteigend</option>
+                  <option>Anbieter A-Z</option>
+                  <option>Anbieter Z-A</option>
+                </select>
+              </div>             
+            </div>
+          </div>
+          <!-- Tarifs -->
+          <div class="row tarif-card-wrapp">
+            <div class="col">
+                <div class="tarif-card prio">
+                  <div class="bg-tarif-card">
+                    <!-- First Block -->
+                    <div class="first-block-wrapp">
+                      <div class="row">
+                        <div class="col-6 col-md-4 col-xl-3 d-flex cunter_and_logo_wrap">
+                          <div class="tarif_counter_wrapp">
+                            <span class="tarif_counter">
+                              <span>1</span>
+                            </span>
+                          </div>
+                          <div class="logo_and_attributs_wrapp">
+                            <div class="provider_logo_wrapp">
+                              <img class="provider_logo"  src="img/EnBW.svg">
+                            </div> 
+                            <span class="provider_name">EnBW Energie Baden-Württemberg AG</span>
+                            <span class="tarif_name">EnBW Privatstrom Natur Max24</span>
+                            <div class="tarif_id_wrapp"><span class="tarif_id">ID:285</span></div>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-12 col-xl-4 order-xl-1 order-12 tarif_info_wrapp">
+                          <div class="tarif_info_icon_wrapp">
+                            <div class="tarif_info_icons">
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="fas fa-pen tarif_info_icon" ></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="fas fa-pen" ></i>
+                                    </div>
+                                    <div class="text">
+                                      Dieser Anbieter akzeptiert die digitale Unterschrift
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>  
+                              
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="fas fa-leaf tarif_info_icon"></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <div class="text">
+                                      Bei diesem Tarif handelt es sich um Ökoenergie
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>  
+
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="fas fa-gift tarif_info_icon"></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="fas fa-gift"></i>
+                                    </div>
+                                    <div class="text">
+                                      Neukundenbonus <span class="text_green">118,00 €</span>
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>    
+                              
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="far fa-envelope tarif_info_icon"></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="far fa-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                      Bei diesem Tarif ist die Angabe der E-Mail-Adresse Pflicht
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>    
+
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="far fa-credit-card tarif_info_icon"></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="far fa-credit-card"></i>
+                                    </div>
+                                    <div class="text">
+                                      Kunde hat die Möglichkeit der Selbstzahlung
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>  
+                            </div>
+                            <div class="acq_commission_wrap_second">
+                              <span class="acq_commission_tittle_second">Abschlussprovision</span>
+                              <span class="follow_up_comm_tittle_second">Folgeprovision</span>
+                            </div>
+                          </div>
+                          <div class="tarif_info_block">
+                              <ul class="tarif_info">
+                                <li class="d-none d-md-block"><span class="material-icons-outlined">info</span>inkl. 89 € Sofortbonus</li>
+                                <li class="d-none d-md-block"><span class="material-icons-outlined">info</span>inkl. 118,00 € Neukundenbonus</li>
+                                <li><span class="material-icons-outlined">info</span>12 Monate eingeschränkte Preisgarantie</li>
+                                <li><span class="material-icons-outlined">info</span>12 Monate Vertragslaufzeit</li>
+                                <li class="d-none d-md-block"><span class="material-icons-outlined">check_circle</span>Onlinetarif</li>
+                                <li class="d-none d-md-block"><span class="material-icons-outlined">check_circle</span>Gültig seit 11.02.2021</li>
+                              </ul>
+                              <div class="folow_up_wrap_second">
+                                <span class="acq_commission">
+                                  <i class="fas fa-coins"></i>118,00 €
+                                </span>
+                                <span class="follow_up_comm">Ja</span>
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col-6 col-md-8 col-xl-5 order-xl-12 order-1 tarif_block_3">
+                          <div class="row flex-column flex-md-row tarif_block_3_1">
+                            <div class="col tarif_block_3_1_costs">
+                              <div>
+                                <span class="d-none d-md-block text_uppercas">
+                                  <span class="material-icons-outlined tarif_block_3_1_costs_icon">info</span>Kosten
+                                </span>
+                                <span class="tarif_block_3_1_costs_costs">
+                                  <span class="material-icons-outlined d-md-none ">info</span>827,79 €
+                                </span>
+                                <span class="tarif_block_3_1_costs_term" >im 1.Jahr</span>
+                              </div>                       
+                            </div>
+                            <div class="col tarif_block_3_1_savings">
+                              <div>
+                                <span class="d-none d-md-block text_uppercas">Ersparnis</span>
+                                <span class="tarif_block_3_1_savings_savings">411,15 €</span>
+                                <span class="tarif_block_3_1_savings_text">gespart</span>
+                              </div>                           
+                            </div>
+                            
+                            <div class="col d-md-none tarif_block_3_1_bonus">
+                              <div>
+                                <span class="tarif_block_3_1_bonus_bonus" ><span class="material-icons-outlined">info</span>+150 €</span>
+                                <span class="tarif_block_3_1_bonus_text">Bonus</span>
+                              </div>
+                            </div>
+                            <div class="col d-md-block d-none tarif_block_3_1_payment" >
+                              <div>
+                                <span class="text_uppercas">Abschlag</span>
+                                <span ><sub>ca.</sub> <span class="tarif_block_3_1_payment_payment">75,25 €</span> <sub>/ mtl.</sub></span>
+                                <span class="tarif_block_3_1_payment_coutn_payments">11 Abschläge</span>
+                              </div>                            
+                            </div>
+                          </div>
+                          <div class="row d-none d-md-flex tarif_block_3_2 justify-content-end ">
+                            <div class="col-4 tarif_block_3_2_work_price">
+                              <div>
+                                <span>Arbeitspreis</span>
+                                <span>
+                                  <span class="tarif_block_3_2_work_price_work_price">25,21</span> <sub>ct / kWh</sub>
+                                </span>                         
+                              </div>
+                            </div>
+                            <div class="col-4 tarif_block_3_2_base_price">
+                              <div>
+                                <span>Grundpreis / Jahr</span>
+                                <span>
+                                  <span class="tarif_block_3_2_base_price_base_price">116,88 €</span> <sub>9.74 € / mtl.</sub>
+                                </span>
+                                
+                              </div>                         
+                            </div>
+                          </div>
+                        </div>  
+                        <div class="col d-md-none order-12 tarif_block_3_3">
+                          <div class="tarif_block_3_3_price_wrap">
+                            <div class="tarif_block_3_3_work">
+                              <span class="tarif_block_3_3_work_text">Arbeitspreis</span>
+                              <span class="tarif_block_3_3_work_price">
+                                <span class="tarif_block_3_3_work_price_price">25,21</span> <span class="tarif_block_3_3_work_price_unit">ct / kWh</span>
+                              </span>
+                            </div>
+                            <div class="tarif_block_3_3_base">
+                              <span class="tarif_block_3_3_base_text">Grundpreis / Jahr</span>
+                              <span class="tarif_block_3_3_base_price">
+                                <span class="tarif_block_3_3_base_price_price">116,88 €</span> <span class="tarif_block_3_3_base_price_unit">9.74 € / mtl.</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>                
+                      </div>
+                    </div>
+                    <!-- Second Block -->
+                    <div class="second-block-wrapp">
+                      <div class="second-block">
+                        <div class="row ">
+                          <div class="col align-self-end second_bloc_1">
+                            <div class="tab_accordion_btn">
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link" id="home-tab" data-toggle="collapse" href="#test1" role="button" aria-controls="test1" aria-expanded="false">Tarifdetails</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="profile-tab" data-toggle="collapse" href="#test2" role="button" aria-controls="test2" aria-expanded="false">Merkmale</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="contact-tab" data-toggle="collapse" href="#test3" role="button" aria-controls="test3" aria-expanded="false">Provision</a>
+                                </li>
+                              </ul>
+                            </div>                        
+                          </div>
+                          <!-- <div class="col">
+                            <button class="btn " type="button" data-toggle="collapse" data-target="#test1" aria-expanded="false" aria-controls="test1">Toggle second element</button>
+                            <button class="btn " type="button" data-toggle="collapse" data-target="#test2" aria-expanded="false" aria-controls="test2">Toggle second element</button>
+                            <button class="btn " type="button" data-toggle="collapse" data-target="#test3" aria-expanded="false" aria-controls="test3">Toggle both elements</button>
+                          </div>                       -->
+                          <div class="col second_bloc_2">
+                            <div class="commission_wrap">
+                              <div class="acq_commission_wrap">
+                                <div>
+                                  <div class="acq_commission_tittle">Abschlussprovision</div>
+                                  <div class="acq_commission">
+                                    <i class="fas fa-coins"></i>118,00 €
+                                  </div>
+                                </div>
+                                
+                              </div>
+                              <div class="follow_up_comm_wrap">
+                                <div class="follow_up_comm_tittle">Folgeprovision</div>
+                                <div>
+                                  <span class="follow_up_comm">Ja</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col second_bloc_3">
+                            <div class="tariff_action">
+                              <button class="btn tariff_action_offer"><i class="fas fa-print"></i><span>Zum Angebot</span></button>
+                              <!-- <button class="btn tariff_action_switch">Wechseln <i class="fas fa-exchange-alt"></i></button> -->
+                              <a href="energie_order_entry.html" class="btn tariff_action_switch">Wechseln <i class="fas fa-exchange-alt"></i></a>
+                            </div>                         
+                          </div>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion Block -->
+                  <div>                  
+                    <div class="row" id="accordion">
+                      <div class="col-12">
+                        <div class="collapse" id="test1" data-parent="#accordion">
+                          <div class="accordion-tarifdetails-wrap">
+                            <!-- Tarif Details -->
+                            <table class="table tarif-details">
+                              <tbody>
+                                <tr>
+                                  <td>Vertragslaufzeit</td>
+                                  <td>12 Monate</td>
+                                </tr>
+                                <tr>
+                                  <td>Kündigungsfrist</td>
+                                  <td>1 Monat</td>
+                                </tr>  
+                                <tr>
+                                  <td>Preisgarantie</td>
+                                  <td>12 Monate Energiepreisgarantie</td>
+                                </tr>   
+                                <tr>
+                                  <td>gewünschtes Lieferdatum Pflicht</td>
+                                  <td>Nein, schnellstmöglich</td>
+                                </tr>  
+                              </tbody>                        
+                            </table>
+                            <!-- Tarif Hinweis -->
+                            <div class="tarif-note">
+                              <div>Hinweis</div>
+                              <div>Achtung: Bitte beachten Sie das die Preise reine Brutto-Preis sind</div>
+                            </div>
+                            
+                            <!-- Tarif Attribute -->
+                            <div class="attr-and-documents">
+                              <ul class="tarif-attr">
+                                <li><i class="fas fa-pen " ></i>Dieser Anbieter akzeptiert die digitale Unterschrift</li>
+                                <li><i class="fas fa-leaf"></i>Bei diesem Tarif handelt es sich um Ökoenergie</li>
+                                <li><i class="fas fa-gift"></i>Der Kunde erhält einen einmaligen Bonus / Treue-Bonus von <span class="green">100,00 €</span></li>
+                                <li><i class="far fa-envelope"></i>Bei diesem Tarif ist die Angabe der E-Mail-Adresse Pflicht</li>
+                                <li><i class="far fa-credit-card"></i>Kunde hat die Möglichkeit der Selbstzahlung</li>
+                              </ul>
+
+                              <div class="documents">
+                                  <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn">
+                                      <span class="desctop"><i class="fas fa-download"></i></span>
+                                      <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Formular Blanko</span></span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                      <span class="desctop"><i class="fas fa-user-check"></i></span>
+                                      <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Vollmacht</span></span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                      <span class="desctop"><i class="fas fa-lock "></i></span>
+                                      <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Datenschutzerklärung</span></span>
+                                    </button>
+                                  </div>
+                                  <div class="cloud_bg"><i class="fas fa-cloud-download-alt"></i></div>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="collapse" id="test2" data-parent="#accordion">
+                          <div class="accordion-tarifcharacteristic-wrap">
+                            <table class="table tarif-characteristic">
+                              <tbody>
+                                <tr>
+                                  <td>Neueinzug rückwirkend</td>
+                                  <td>6 Woche(n)</td>
+                                </tr>
+                                <tr>
+                                  <td>Neueinzug im Voraus</td>
+                                  <td>6 Woche(n)</td>
+                                </tr>  
+                                <tr>
+                                  <td>Wechsel im Voraus</td>
+                                  <td>6 Woche(n)</td>
+                                </tr>   
+                                <tr>
+                                  <td>Abschläge jährlich</td>
+                                  <td>11</td>
+                                </tr>  
+                                <tr>
+                                  <td>Maximales Alter des Kunden</td>
+                                  <td>99 Jahre</td>
+                                </tr> 
+                              </tbody>                        
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="collapse" id="test3" data-parent="#accordion">
+                          <div class="accordion-tarifprov-wrap">
+                            <table class="table tarif-prov">
+                              <tbody>
+                                <tr>
+                                  <td>Abschlussprovision</td>
+                                  <td>118 €</td>
+                                </tr>
+                                <tr>
+                                  <td>Leaderbonus</td>
+                                  <td>59 €</td>
+                                </tr>  
+                                <tr>
+                                  <td>On-Top </td>
+                                  <td>3 €</td>
+                                </tr>   
+                                <tr>
+                                  <td>Zielvereinbarung</td>
+                                  <td>2 € pro Vertag</td>
+                                </tr>                                 
+                              </tbody>                        
+                            </table>
+                            <div class="tarif-prov-summ">
+                              <div>Summe</div>
+                              <div>182 €</div>
+                            </div>
+
+                            <table class="table tarif-prov">
+                              <tbody>
+                                <tr>
+                                  <td>Folgeprovision jährlich</td>
+                                  <td>15 €</td>
+                                </tr>
+                                <tr>
+                                  <td>Folgeprovision einmalig</td>
+                                  <td>35 €</td>
+                                </tr>                                  
+                              </tbody>                        
+                            </table>
+
+                            <div class="tarif-prov-summ">
+                              <div>Summe</div>
+                              <div>50 €</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+            </div>
+
+
+          <!-- Tarifs 2-->
+          <div class="row tarif-card-wrapp">
+            <div class="col">
+                <div class="tarif-card">
+                  <div class="bg-tarif-card">
+                    <!-- First Block -->
+                    <div class="first-block-wrapp">
+                      <div class="row">
+                        <div class="col-6 col-md-4 col-xl-3 d-flex cunter_and_logo_wrap">
+                          <div class="tarif_counter_wrapp">
+                            <span class="tarif_counter">
+                              <span>1</span>
+                            </span>
+                          </div>
+                          <div class="logo_and_attributs_wrapp">
+                            <div class="provider_logo_wrapp">
+                              <img class="provider_logo"  src="img/Vattenfall_logo.svg">
+                            </div> 
+                            <span class="provider_name">EnBW Energie Baden-Württemberg AG</span>
+                            <span class="tarif_name">EnBW Privatstrom Natur Max24</span>
+                            <div class="tarif_id_wrapp"><span class="tarif_id">ID:285</span></div>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-12 col-xl-4 order-xl-1 order-12 tarif_info_wrapp">
+                          <div class="tarif_info_icon_wrapp">
+                            <div class="tarif_info_icons">
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="fas fa-pen tarif_info_icon" ></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="fas fa-pen" ></i>
+                                    </div>
+                                    <div class="text">
+                                      Dieser Anbieter akzeptiert die digitale Unterschrift
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>  
+                              
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="fas fa-leaf tarif_info_icon"></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <div class="text">
+                                      Bei diesem Tarif handelt es sich um Ökoenergie
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>  
+
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="fas fa-gift tarif_info_icon"></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="fas fa-gift"></i>
+                                    </div>
+                                    <div class="text">
+                                      Neukundenbonus <span class="text_green">118,00 €</span>
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>    
+                              
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="far fa-envelope tarif_info_icon"></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="far fa-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                      Bei diesem Tarif ist die Angabe der E-Mail-Adresse Pflicht
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>    
+
+                              <!-- Tooltip -->
+                              <span class="tooltip_custom">
+                                <i class="far fa-credit-card tarif_info_icon"></i>
+                                <span class="info_custom">
+                                  <!-- <span class="pronounce_custom"></span> -->
+                                  <span class="text_custom">
+                                    <div class="icon">
+                                      <i class="far fa-credit-card"></i>
+                                    </div>
+                                    <div class="text">
+                                      Kunde hat die Möglichkeit der Selbstzahlung
+                                    </div>
+                                  </span>
+                                </span>
+                              </span>  
+                            </div>
+                            <div class="acq_commission_wrap_second">
+                              <span class="acq_commission_tittle_second">Abschlussprovision</span>
+                              <span class="follow_up_comm_tittle_second">Folgeprovision</span>
+                            </div>
+                          </div>
+                          <div class="tarif_info_block">
+                              <ul class="tarif_info">
+                                <li class="d-none d-md-block"><span class="material-icons-outlined">info</span>inkl. 89 € Sofortbonus</li>
+                                <li class="d-none d-md-block"><span class="material-icons-outlined">info</span>inkl. 118,00 € Neukundenbonus</li>
+                                <li><span class="material-icons-outlined">info</span>12 Monate eingeschränkte Preisgarantie</li>
+                                <li><span class="material-icons-outlined">info</span>12 Monate Vertragslaufzeit</li>
+                                <li class="d-none d-md-block"><span class="material-icons-outlined">check_circle</span>Onlinetarif</li>
+                                <li class="d-none d-md-block"><span class="material-icons-outlined">check_circle</span>Gültig seit 11.02.2021</li>
+                              </ul>
+                              <div class="folow_up_wrap_second">
+                                <span class="acq_commission">
+                                  <i class="fas fa-coins"></i>118,00 €
+                                </span>
+                                <span class="follow_up_comm">Ja</span>
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col-6 col-md-8 col-xl-5 order-xl-12 order-1 tarif_block_3">
+                          <div class="row flex-column flex-md-row tarif_block_3_1">
+                            <div class="col tarif_block_3_1_costs">
+                              <div>
+                                <span class="d-none d-md-block text_uppercas">
+                                  <span class="material-icons-outlined tarif_block_3_1_costs_icon">info</span>Kosten
+                                </span>
+                                <span class="tarif_block_3_1_costs_costs">
+                                  <span class="material-icons-outlined d-md-none ">info</span>827,79 €
+                                </span>
+                                <span class="tarif_block_3_1_costs_term" >im 1.Jahr</span>
+                              </div>                       
+                            </div>
+                            <div class="col tarif_block_3_1_savings">
+                              <div>
+                                <span class="d-none d-md-block text_uppercas">Ersparnis</span>
+                                <span class="tarif_block_3_1_savings_savings">411,15 €</span>
+                                <span class="tarif_block_3_1_savings_text">gespart</span>
+                              </div>                           
+                            </div>
+                            
+                            <div class="col d-md-none tarif_block_3_1_bonus">
+                              <div>
+                                <span class="tarif_block_3_1_bonus_bonus" ><span class="material-icons-outlined">info</span>+150 €</span>
+                                <span class="tarif_block_3_1_bonus_text">Bonus</span>
+                              </div>
+                            </div>
+                            <div class="col d-md-block d-none tarif_block_3_1_payment" >
+                              <div>
+                                <span class="text_uppercas">Abschlag</span>
+                                <span ><sub>ca.</sub> <span class="tarif_block_3_1_payment_payment">75,25 €</span> <sub>/ mtl.</sub></span>
+                                <span class="tarif_block_3_1_payment_coutn_payments">11 Abschläge</span>
+                              </div>                            
+                            </div>
+                          </div>
+                          <div class="row d-none d-md-flex tarif_block_3_2 justify-content-end ">
+                            <div class="col-4 tarif_block_3_2_work_price">
+                              <div>
+                                <span>Arbeitspreis</span>
+                                <span>
+                                  <span class="tarif_block_3_2_work_price_work_price">25,21</span> <sub>ct / kWh</sub>
+                                </span>                         
+                              </div>
+                            </div>
+                            <div class="col-4 tarif_block_3_2_base_price">
+                              <div>
+                                <span>Grundpreis / Jahr</span>
+                                <span>
+                                  <span class="tarif_block_3_2_base_price_base_price">116,88 €</span> <sub>9.74 € / mtl.</sub>
+                                </span>
+                                
+                              </div>                         
+                            </div>
+                          </div>
+                        </div>  
+                        <div class="col d-md-none order-12 tarif_block_3_3">
+                          <div class="tarif_block_3_3_price_wrap">
+                            <div class="tarif_block_3_3_work">
+                              <span class="tarif_block_3_3_work_text">Arbeitspreis</span>
+                              <span class="tarif_block_3_3_work_price">
+                                <span class="tarif_block_3_3_work_price_price">25,21</span> <span class="tarif_block_3_3_work_price_unit">ct / kWh</span>
+                              </span>
+                            </div>
+                            <div class="tarif_block_3_3_base">
+                              <span class="tarif_block_3_3_base_text">Grundpreis / Jahr</span>
+                              <span class="tarif_block_3_3_base_price">
+                                <span class="tarif_block_3_3_base_price_price">116,88 €</span> <span class="tarif_block_3_3_base_price_unit">9.74 € / mtl.</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>                
+                      </div>
+                    </div>
+                    <!-- Second Block -->
+                    <div class="second-block-wrapp">
+                      <div class="second-block">
+                        <div class="row ">
+                          <div class="col align-self-end second_bloc_1">
+                            <div class="tab_accordion_btn">
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link" id="home-tab" data-toggle="collapse" href="#test4" role="button" aria-controls="test4" aria-expanded="false">Tarifdetails</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="profile-tab" data-toggle="collapse" href="#test5" role="button" aria-controls="test5" aria-expanded="false">Merkmale</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" id="contact-tab" data-toggle="collapse" href="#test6" role="button" aria-controls="test6" aria-expanded="false">Provision</a>
+                                </li>
+                              </ul>
+                            </div>                        
+                          </div>
+                          <!-- <div class="col">
+                            <button class="btn " type="button" data-toggle="collapse" data-target="#test1" aria-expanded="false" aria-controls="test1">Toggle second element</button>
+                            <button class="btn " type="button" data-toggle="collapse" data-target="#test2" aria-expanded="false" aria-controls="test2">Toggle second element</button>
+                            <button class="btn " type="button" data-toggle="collapse" data-target="#test3" aria-expanded="false" aria-controls="test3">Toggle both elements</button>
+                          </div>                       -->
+                          <div class="col second_bloc_2">
+                            <div class="commission_wrap">
+                              <div class="acq_commission_wrap">
+                                <div>
+                                  <div class="acq_commission_tittle">Abschlussprovision</div>
+                                  <div class="acq_commission">
+                                    <i class="fas fa-coins"></i>118,00 €
+                                  </div>
+                                </div>
+                                
+                              </div>
+                              <div class="follow_up_comm_wrap">
+                                <div class="follow_up_comm_tittle">Folgeprovision</div>
+                                <div>
+                                  <span class="follow_up_comm">Ja</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col second_bloc_3">
+                            <div class="tariff_action">
+                              <button class="btn tariff_action_offer"><i class="fas fa-print"></i><span>Zum Angebot</span></button>
+                              <!-- <button class="btn tariff_action_switch">Wechseln <i class="fas fa-exchange-alt"></i></button> -->
+                              <a href="energie_order_entry.html" class="btn tariff_action_switch">Wechseln <i class="fas fa-exchange-alt"></i></a>
+                            </div>                         
+                          </div>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion Block -->
+                  <div>                  
+                    <div class="row" id="accordion2">
+                      <div class="col-12">
+                        <div class="collapse" id="test4" data-parent="#accordion2">
+                          <div class="accordion-tarifdetails-wrap">
+                            <!-- Tarif Details -->
+                            <table class="table tarif-details">
+                              <tbody>
+                                <tr>
+                                  <td>Vertragslaufzeit</td>
+                                  <td>12 Monate</td>
+                                </tr>
+                                <tr>
+                                  <td>Kündigungsfrist</td>
+                                  <td>1 Monat</td>
+                                </tr>  
+                                <tr>
+                                  <td>Preisgarantie</td>
+                                  <td>12 Monate Energiepreisgarantie</td>
+                                </tr>   
+                                <tr>
+                                  <td>gewünschtes Lieferdatum Pflicht</td>
+                                  <td>Nein, schnellstmöglich</td>
+                                </tr>  
+                              </tbody>                        
+                            </table>
+                            <!-- Tarif Hinweis -->
+                            <div class="tarif-note">
+                              <div>Hinweis</div>
+                              <div>Achtung: Bitte beachten Sie das die Preise reine Brutto-Preis sind</div>
+                            </div>
+                            
+                            <!-- Tarif Attribute -->
+                            <div class="attr-and-documents">
+                              <ul class="tarif-attr">
+                                <li><i class="fas fa-pen " ></i>Dieser Anbieter akzeptiert die digitale Unterschrift</li>
+                                <li><i class="fas fa-leaf"></i>Bei diesem Tarif handelt es sich um Ökoenergie</li>
+                                <li><i class="fas fa-gift"></i>Der Kunde erhält einen einmaligen Bonus / Treue-Bonus von <span class="green">100,00 €</span></li>
+                                <li><i class="far fa-envelope"></i>Bei diesem Tarif ist die Angabe der E-Mail-Adresse Pflicht</li>
+                                <li><i class="far fa-credit-card"></i>Kunde hat die Möglichkeit der Selbstzahlung</li>
+                              </ul>
+
+                              <div class="documents">
+                                  <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn">
+                                      <span class="desctop"><i class="fas fa-download"></i></span>
+                                      <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Formular Blanko</span></span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                      <span class="desctop"><i class="fas fa-user-check"></i></span>
+                                      <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Vollmacht</span></span>
+                                    </button>
+                                    <button type="button" class="btn">
+                                      <span class="desctop"><i class="fas fa-lock "></i></span>
+                                      <span class="mobil"><i class="fas fa-paperclip"></i><span class="icon-text">Datenschutzerklärung</span></span>
+                                    </button>
+                                  </div>
+                                  <div class="cloud_bg"><i class="fas fa-cloud-download-alt"></i></div>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="collapse" id="test5" data-parent="#accordion2">
+                          <div class="accordion-tarifcharacteristic-wrap">
+                            <table class="table tarif-characteristic">
+                              <tbody>
+                                <tr>
+                                  <td>Neueinzug rückwirkend</td>
+                                  <td>6 Woche(n)</td>
+                                </tr>
+                                <tr>
+                                  <td>Neueinzug im Voraus</td>
+                                  <td>6 Woche(n)</td>
+                                </tr>  
+                                <tr>
+                                  <td>Wechsel im Voraus</td>
+                                  <td>6 Woche(n)</td>
+                                </tr>   
+                                <tr>
+                                  <td>Abschläge jährlich</td>
+                                  <td>11</td>
+                                </tr>  
+                                <tr>
+                                  <td>Maximales Alter des Kunden</td>
+                                  <td>99 Jahre</td>
+                                </tr> 
+                              </tbody>                        
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="collapse" id="test6" data-parent="#accordion2">
+                          <div class="accordion-tarifprov-wrap">
+                            <table class="table tarif-prov">
+                              <tbody>
+                                <tr>
+                                  <td>Abschlussprovision</td>
+                                  <td>118 €</td>
+                                </tr>
+                                <tr>
+                                  <td>Leaderbonus</td>
+                                  <td>59 €</td>
+                                </tr>  
+                                <tr>
+                                  <td>On-Top </td>
+                                  <td>3 €</td>
+                                </tr>   
+                                <tr>
+                                  <td>Zielvereinbarung</td>
+                                  <td>2 € pro Vertag</td>
+                                </tr>                                 
+                              </tbody>                        
+                            </table>
+                            <div class="tarif-prov-summ">
+                              <div>Summe</div>
+                              <div>182 €</div>
+                            </div>
+
+                            <table class="table tarif-prov">
+                              <tbody>
+                                <tr>
+                                  <td>Folgeprovision jährlich</td>
+                                  <td>15 €</td>
+                                </tr>
+                                <tr>
+                                  <td>Folgeprovision einmalig</td>
+                                  <td>35 €</td>
+                                </tr>                                  
+                              </tbody>                        
+                            </table>
+
+                            <div class="tarif-prov-summ">
+                              <div>Summe</div>
+                              <div>50 €</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+            </div>
+            
+          <!-- The Modal -->
+          <div class="modal fade" id="tariffCalcFilter">
+            <div class="modal-dialog energie-rechner-filter-modal">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Filter</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-12 contract-term-wrapp">
+                      <div class="row radio-block-wrapp">
+                        <div class="col-12">
+                          <div class="tittle-filter-block">Vertragslaufzeit (Monate)</div>
+                        </div>
+                        <div class="col-3">
+                          <div class="btn-radio-wrapp">
+                            <label for="rdo-b1-1" class="btn-radio">
+                              <input type="radio" id="rdo-b1-1" name="radio-grp">
+                              <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="9"></circle>
+                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                              </svg>
+                              <span>12</span>
+                            </label>
+                          </div>                          
+                        </div>
+                        <div class="col-3">
+                          <div class="btn-radio-wrapp">
+                            <label for="rdo-b1-2" class="btn-radio">
+                              <input type="radio" id="rdo-b1-2" name="radio-grp">
+                              <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="9"></circle>
+                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                              </svg>
+                              <span>24</span>
+                            </label>
+                          </div>  
+                        </div>
+                        <div class="col-3">
+                          <div class="btn-radio-wrapp">
+                            <label for="rdo-b1-3" class="btn-radio">
+                              <input type="radio" id="rdo-b1-3" name="radio-grp">
+                              <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="9"></circle>
+                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                              </svg>
+                              <span>36</span>
+                            </label>
+                          </div>  
+                        </div>
+                        <div class="col-3">
+                          <div class="btn-radio-wrapp">
+                            <label for="rdo-b1-4" class="btn-radio">
+                              <input type="radio" id="rdo-b1-4" name="radio-grp">
+                              <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="9"></circle>
+                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                              </svg>
+                              <span>egal</span>
+                            </label>
+                          </div>  
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="col-12 price-guarantee-wrapp">
+                      <div class="row radio-block-wrapp">
+                        <div class="col-12">
+                          <div class="tittle-filter-block">E-Preis Garantie (Monate)</div>
+                        </div>
+                        <div class="col-3">
+                          <div class="btn-radio-wrapp">
+                            <label for="rdo-b2-1" class="btn-radio">
+                              <input type="radio" id="rdo-b2-1" name="radio-grp">
+                              <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="9"></circle>
+                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                              </svg>
+                              <span>12</span>
+                            </label>
+                          </div>                          
+                        </div>
+                        <div class="col-3">
+                          <div class="btn-radio-wrapp">
+                            <label for="rdo-b2-2" class="btn-radio">
+                              <input type="radio" id="rdo-b2-2" name="radio-grp">
+                              <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="9"></circle>
+                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                              </svg>
+                              <span>24</span>
+                            </label>
+                          </div>  
+                        </div>
+                        <div class="col-3 ">
+                          <div class="btn-radio-wrapp">
+                            <label for="rdo-b2-3" class="btn-radio">
+                              <input type="radio" id="rdo-b2-3" name="radio-grp">
+                              <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="9"></circle>
+                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                              </svg>
+                              <span>36</span>
+                            </label>
+                          </div>  
+                        </div>
+                        <div class="col-3">
+                          <div class="btn-radio-wrapp">
+                            <label for="rdo-b2-4" class="btn-radio">
+                              <input type="radio" id="rdo-b2-4" name="radio-grp">
+                              <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                <circle cx="10" cy="10" r="9"></circle>
+                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                              </svg>
+                              <span>egal</span>
+                            </label>
+                          </div>  
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="col-12 filter-datapicker-wrapp">
+                      <div class="row filter-datapicker">
+                        <div class="col-6">
+                          <div class="form-group">
+                            <input class="form-control enete-form-control" placeholder="PREISDATUM" type="date" />
+                          </div>                         
+                        </div>
+                      </div>                     
+                    </div>
+
+                    <div class="col-12">
+                      <div class="row filter-option-wrap">
+                        <div class="col-12 filter-option-wrapp">
+                          <div class="filter-option-title">Optionen</div>
+                        </div>
+  
+                        <div class="col-sm-12 col-md-6 filter-option-check-wrapp option-group-1">
+                          <label class="checkbox_custom bounce">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                            </svg>
+                            <span class="label_title">Jahrespreis mit Bonus</span>
+                          </label>
+
+
+                          <label class="checkbox_custom bounce">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                            </svg>
+                            <span class="label_title">Tarife nur mit digitaler Unterschrift</span>
+                          </label>
+
+                          <label class="checkbox_custom bounce">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                            </svg>
+                            <span class="label_title">E-Mail Pflicht</span>
+                          </label>
+                        </div>
+                      
+                        <div class="col-sm-12 col-md-6 filter-option-check-wrapp option-group-2">
+
+                          <label class="checkbox_custom bounce">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                            </svg>
+                            <span class="label_title">nur Ökotarife</span>
+                          </label>
+
+                          <label class="checkbox_custom bounce">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                            </svg>
+                            <span class="label_title">Selbstzahlung</span>
+                          </label>
+
+                          <label class="checkbox_custom bounce">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                            </svg>
+                            <span class="label_title">Nur Tarife mit Folgeprovision</span>
+                          </label>
+
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>       
+
+          <div class="offer_block_footer">
+            <div class="offer_block_row">
+              <div class="offer_block_col">
+                <div class="offer_wrap">
+                  <div class="offer">
+                    <div class="offer_logo"><img src="img/EnBW.svg"></div>
+                    <button class="btn offer_close"><i class="fas fa-times"></i></button>
+                    <div class="offer_price">ca. <span>705,25 €</span> / mtl.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="offer_block_col">
+                <div class="offer_wrap">
+                  <div class="offer">
+                    <div class="offer_logo"><img src="img/Vattenfall_logo.svg"></div>
+                    <button class="btn offer_close"><i class="fas fa-times"></i></button>
+                    <div class="offer_price">ca. <span>705,25 €</span> / mtl.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="offer_block_col">
+                <div class="offer_wrap">
+
+                </div>
+              </div>
+              <div class="offer_block_button">
+                <span>Maximal 3 Tarife im Vergleich</span>
+                <button class="btn offer_action">Zum Angebot</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END content -->
+      </div>
+      <!-- END cntent wrap -->
+    </div>
+
+    <!-- second mobile menu -->
+    @@include('./include_html/second_mobile_menu.html')
+    <!--END second mobile menu -->
+
+    @@include('./include_html/scripts_footer.html')
+  </body>
+</html>

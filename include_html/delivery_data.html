@@ -1,0 +1,194 @@
+<div class="col-12 col-lg-7 order-12 order-lg-1">
+    <div class="medium_card">
+      <div class="card_header">
+        <h3 class="card_title">Liefertermin & Vorversorger</h3>
+        <!-- <h6 class="card_sub_title">Lieferanschrift & Vertragspartner</h6> -->
+      </div>
+      <div class="card_content">
+        <form>
+          <div class="form-row">
+              <div class="col-md-6 col-12">
+                <label for="change_supplier" class="btn-radio">
+                    <input type="radio" id="change_supplier" name="change-option">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <circle cx="10" cy="10" r="9"></circle>
+                      <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                      <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                    </svg>
+                    <span>Lieferantenwechsel</span>
+                  </label>                
+              </div>
+              <div class="col-md-6 col-12">
+                <label for="new_move" class="btn-radio">
+                    <input type="radio" id="new_move" name="change-option">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <circle cx="10" cy="10" r="9"></circle>
+                      <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                      <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                    </svg>
+                    <span>Umzug / Neueinzug</span>
+                  </label>                
+              </div>
+          </div>
+          <!-- Block Umzug -->
+          <div class="form-row">
+            <div class="col">
+                <div class="form-group form-row">
+                    <label for="inputPassword3" class="col-sm-6 custom_label ">Einzugsdatum</label>
+                    <div class="col-sm-6">
+                        <input type="date" class="form-control custom_input " placeholder="TT.MM.YYYY">
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                  </div>
+            </div>                       
+          </div>
+          <!-- END Block Umzug -->
+          <!-- Block Lieferantenwechsel -->
+          <div class="form-row">
+            <div class="col-md-6 col-12">
+                <label class="checkbox_custom bounce">
+                    <input type="checkbox" class="">
+                    <svg viewBox="0 0 21 21">
+                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                    </svg>
+                    <span class="label_title">schnellstmögliches Lieferdatum</span>
+                  </label>
+            </div>
+            <div class="col-md-6 col-12">
+                <input type="date" class="form-control custom_input " placeholder="gewünschtes Lieferdatum">
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+            </div>                          
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 col-12">
+                <input type="text" class="form-control custom_input" placeholder="Vorversorger">
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <input type="text" class="form-control custom_input " placeholder="Bisherige Kundennummer">
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+            </div>                          
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 col-12">
+                <label class="checkbox_custom bounce">
+                    <input type="checkbox" class="">
+                    <svg viewBox="0 0 21 21">
+                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                    </svg>
+                    <span class="label_title">Ich habe bereits gekündigt</span>
+                  </label>
+            </div>
+            <div class="col-md-6 col-12">
+                <input type="date" class="form-control custom_input " placeholder="Altvertrag gekündigt zum">
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+            </div>                          
+          </div>
+          <!-- END Block Lieferantenwechsel -->
+
+          <hr class="dividing_line">
+
+          <div class="form-row">
+            <div class="col-12">
+              <input type="text" class="form-control custom_input " placeholder="Zählernummer">
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>                      
+          </div>
+          <div class="form-row">
+            <div class="col-12">
+              <input type="text" class="form-control custom_input " placeholder="MeLo-ID">
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>                      
+          </div>
+          <div class="form-row">
+            <div class="col-12">
+              <input type="text" class="form-control custom_input " placeholder="abw. Messtellennetzbetreiber">
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>                      
+          </div>
+          <div class="form-row">
+            <div class="col-12">
+              <input type="text" class="form-control custom_input " placeholder="MaLo-ID">
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>                      
+          </div>
+
+          <div class="form-row">
+            <div class="col-12">
+                <label class="checkbox_custom bounce none-overflow">
+                    <input type="checkbox" class="">
+                    <svg viewBox="0 0 21 21">
+                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                    </svg>
+                    <span class="label_title">Hiermit erkläre ich mich ausdrücklich damit einverstanden, dass ich bereits vor Ablauf der Widerrufsfrist zu den Bedingungen dieses Vertrags mit Strom beliefert werde, wenn dies für Vattenfall Europe Sales möglich ist (z. B. wegen schnellen Lieferantenwechselprozessen). Mein Widerrufsrecht bleibt hiervon unberührt.</span>
+                  </label>
+            </div>                      
+          </div>
+          <div class="form-row">
+            <div class="col-12">
+                <label class="checkbox_custom bounce none-overflow">
+                    <input type="checkbox" class="">
+                    <svg viewBox="0 0 21 21">
+                        <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                    </svg>
+                    <span class="label_title none-overflow">ja, ich möchte meine Rechnung per Post erhalten (hierbei können zusätzliche Kosten entstehen).</span>
+                  </label>
+            </div>                      
+          </div>
+
+          <div class="form-row">
+            <div class="col">
+                <div class="form-group form-row">
+                    <label for="inputPassword3" class="col-sm-6 custom_label ">Unterschriftsdatum</label>
+                    <div class="col-sm-6">
+                        <input type="date" class="form-control custom_input " placeholder="Datum der Unterschrift">
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                  </div>
+            </div>                       
+          </div>
+
+
+          <div class="form-row">
+            <div class="col d-flex">
+              <button class="btn action_btn dev ">
+                <i class="fas fa-chevron-left"></i>
+                <span class="d-none d-md-inline-block">Schritt zurück</span>
+                <span class="d-block d-md-none">zurück</span>
+              </button>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <button class="btn action_btn red ">
+                <span class="d-none d-md-inline-block">Nächster schritt</span>
+                <span class="d-block d-md-none">Weiter</span>
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>

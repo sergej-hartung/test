@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+    @@include('./include_html/head.html')
+  <!-- End Head -->
+  
+  <body>
+    <div class="container-fluid" style="height: 100%;">
+      <!-- Block Header -->
+        @@include('./include_html/header.html')
+      <!-- Block Header Ende -->
+
+      <!-- Menu Mobil -->
+        @@include('./include_html/mobile_menu.html')
+      <!-- Menu Mobil Ende -->
+
+      <!-- cntent wrap-->
+      <div class="row content_wrap overflow-hidden">
+        <!-- ipad & desc Main menu -->
+          @@include('./include_html/main_menu.html')
+        <!-- END ipad & desc Main menu -->
+
+        <!-- content -->
+        <div class="col conten">
+          <div class="row">
+            <div class="col bread_krums">Produktauswahl</div>
+          </div>
+          <div class="row widget_row">
+            <div class="col-xl-6 col-lg-12 widget_col">
+              <a href="energie_rechner.html" class="widget_wrapp active">
+                <div class="widget_icon_1_wrapp">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="widget_content">
+                  <span class="widget_name">Energie</span>
+                  <span class="widget_desc d-none d-md-block">Tarifrechner für Strom- und Gastarife</span>
+                </div>
+                <div class="widget_icon_2_wrapp">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+              </a>
+              
+            </div>
+            
+            <div class="col-xl-6 col-lg-12 widget_col">
+              <a href="#" class="widget_wrapp active">
+                <div class="widget_icon_1_wrapp">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="widget_content">
+                  <span class="widget_name">Internet & Festnetz</span>
+                  <span class="widget_desc d-none d-md-block">Telefon und Internet - DSL | Kabel | LTE</span>
+                </div>
+                <div class="widget_icon_2_wrapp">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+              </a>
+              
+            </div>
+            <div class="col-xl-6 col-lg-12 widget_col">
+              <a href="#" class="widget_wrapp active">
+                <div class="widget_icon_1_wrapp">
+                  <i class="fas fa-external-link-alt"></i>
+                </div>
+                <div class="widget_content">
+                  <span class="widget_name">Zusatzprodukte</span>
+                  <span class="widget_desc d-none d-md-block">Reiseportal | Insel Rügen</span>
+                </div>
+                <div class="widget_icon_2_wrapp">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+              </a>
+              
+            </div>
+            <div class="col-xl-6 col-lg-12 widget_col">
+              <a href="mobilfunk_rechner.html" class="widget_wrapp active">
+                <div class="widget_icon_1_wrapp">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="widget_content">
+                  <span class="widget_name">Mobilfunk</span>
+                  <span class="widget_desc d-none d-md-block">Mobilfunktarife und Hardware-Deals</span>
+                </div>
+                <div class="widget_icon_2_wrapp">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+              </a>
+              
+            </div>
+          </div>
+          
+        </div>
+        <!-- END content -->
+      </div>
+      <!-- END cntent wrap -->
+    </div>
+
+    <!-- second mobile menu -->
+    @@include('./include_html/second_mobile_menu.html')
+    <!--END second mobile menu -->
+
+    @@include('./include_html/scripts_footer.html')
+  </body>
+</html>

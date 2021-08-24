@@ -1,0 +1,35 @@
+.secon_mobile_menu{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    box-shadow: 0px -1px 0px #EBEFF2;
+    max-height: $height_secondMomil_menu;
+    background-color: $white;
+
+    .col{
+        display: flex;
+        justify-content: center;
+    }
+
+    button{
+        &.btn{
+            padding: 0;
+            font-size: 20px;
+            line-height: 20px;
+            border: none;
+        }
+        &:focus{
+            box-shadow: none;
+        }
+        &.active{
+            color: $menu_active_Tex_icon_color;
+        }
+    }
+}
+
+.btn_custom{
+    color: $icon_color_second_menu;
+    flex: 1;
+}
